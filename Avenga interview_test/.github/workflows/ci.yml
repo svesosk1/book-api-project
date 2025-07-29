@@ -27,10 +27,12 @@ jobs:
         run: npm run book-store-test
         working-directory: Avenga interview_test/wdio-api-project
 
+
+      - name: Install Allure CLI globally
+        run: npm install -g allure-commandline --no-save
+
       - name: Generate Allure report
-        run: |
-          npm install -g allure-commandline --no-save
-          npm run allure:report
+        run: npm run allure:report
         working-directory: Avenga interview_test/wdio-api-project
         if: always()
 
