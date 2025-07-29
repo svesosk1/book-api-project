@@ -5,7 +5,8 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "types": ["@wdio/types", "node"]
   },
-  "include": ["test/**/*.ts", "utils/**/*.ts"]
+  "include": ["test/**/*.ts", "utils/**/*.ts", "wdio.conf.ts"]
 }
