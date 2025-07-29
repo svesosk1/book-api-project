@@ -5,7 +5,7 @@
   "scripts": {
     "test": "wdio run wdio.conf.ts",
     "book-store-test": "wdio run wdio.conf.ts",
-    "allure:report": "allure generate ./allure-results --clean && allure open ./allure-report"
+    "allure:report": "allure generate ./allure-results --clean"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.6",
