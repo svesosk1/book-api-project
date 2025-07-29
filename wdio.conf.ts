@@ -9,6 +9,14 @@ export const config: WebdriverIO.Config = {
     capabilities: [{
         maxInstances: 1,
         browserName: 'chrome',
+        'goog:chromeOptions': {
+            args: [
+                `--user-data-dir=/tmp/chrome-user-data-dir-${Math.floor(Math.random() * 1e9)}`,
+                '--no-sandbox',
+                '--disable-dev-shm-usage',
+                '--headless=new'
+            ]
+        }
     }],
     logLevel: 'info',
     framework: 'mocha',
