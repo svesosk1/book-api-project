@@ -1,6 +1,6 @@
 import { join } from 'path';
 
-export const config: WebdriverIO.RunnerOptions = {
+export const config: WebdriverIO.Config = {
     runner: 'local',
     specs: [
         './test/**/*.ts'
