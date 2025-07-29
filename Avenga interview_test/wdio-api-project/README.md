@@ -1,5 +1,7 @@
 # WDIO API Project
 
+![CI](https://github.com/svesosk1/book-api-project/actions/workflows/ci.yml/badge.svg)
+
 API automation tests for Books and Authors API using WebdriverIO, TypeScript, axios, and Allure.
 
 ## Features
