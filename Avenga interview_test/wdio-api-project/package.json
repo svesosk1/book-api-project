@@ -1,0 +1,25 @@
+{
+  "name": "wdio-api-project",
+  "version": "1.0.0",
+  "description": "API automation tests for Books and Authors API using WebdriverIO, TypeScript, axios, and Allure.",
+  "scripts": {
+    "test": "wdio run wdio.conf.ts",
+    "book-store-test": "wdio run wdio.conf.ts",
+    "allure:report": "allure generate ./allure-results --clean && allure open ./allure-report"
+  },
+  "devDependencies": {
+    "@wdio/cli": "^8.30.2",
+    "@wdio/local-runner": "^8.30.2",
+    "@wdio/mocha-framework": "^8.30.2",
+    "@wdio/allure-reporter": "^8.30.2",
+    "@wdio/spec-reporter": "^8.30.2",
+    "typescript": "^5.4.5",
+    "ts-node": "^10.9.2",
+    "@types/node": "^20.11.30",
+    "@types/mocha": "^10.0.6",
+    "tsconfig-paths": "^4.2.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.8"
+  }
+}
