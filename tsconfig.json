@@ -6,7 +6,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "outDir": "dist",
-    "types": ["@wdio/types", "node"]
+    "types": ["@wdio/types", "node", "mocha"]
   },
   "include": ["test/**/*.ts", "utils/**/*.ts", "wdio.conf.ts"]
 }
