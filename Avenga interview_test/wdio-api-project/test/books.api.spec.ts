@@ -11,7 +11,7 @@ describe('Books API', () => {
     const response = await client.get(BOOKS_ENDPOINT);
     allureReporter.addAttachment('Status Code', response.status.toString(), 'text/plain');
     allureReporter.addAttachment('Response Body', JSON.stringify(response.data, null, 2), 'application/json');
-    expect(response.status).toBe(200);
+    expect(response.status).toBe(404); // Intentionally fail for CI/CD test
     expect(Array.isArray(response.data)).toBe(true);
   });
 
