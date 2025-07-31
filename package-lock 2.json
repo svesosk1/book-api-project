@@ -19,7 +19,6 @@
         "@wdio/mocha-framework": "^8.30.2",
         "@wdio/spec-reporter": "^8.30.2",
         "@wdio/types": "^8.41.0",
-        "chromedriver": "^138.0.5",
         "ts-node": "^10.9.2",
         "tsconfig-paths": "^4.2.0",
         "typescript": "^5.4.5",
@@ -330,12 +329,6 @@
       "engines": {
         "node": ">=14.16"
       }
-    },
-    "node_modules/@testim/chrome-version": {
-      "version": "1.1.4",
-      "resolved": "https://registry.npmjs.org/@testim/chrome-version/-/chrome-version-1.1.4.tgz",
-      "integrity": "sha512-kIhULpw9TrGYnHp/8VfdcneIcxKnLixmADtukQRtJUmsVlMg0niMkwV0xZmi8hqa57xqilIHjWFA0GKvEjVU5g==",
-      "dev": true
     },
     "node_modules/@tootallnate/quickjs-emscripten": {
       "version": "0.23.0",
@@ -808,9 +801,9 @@
       }
     },
     "node_modules/@zip.js/zip.js": {
-      "version": "2.7.70",
-      "resolved": "https://registry.npmjs.org/@zip.js/zip.js/-/zip.js-2.7.70.tgz",
-      "integrity": "sha512-GkUtNfhrfR90xurdCUtFI6yDqlTI70dMolOZuyDAVNxvgn0uv8qvoGzbyYWcfkfTYBKNR4NJs6poQE/cr1pW3A==",
+      "version": "2.7.69",
+      "resolved": "https://registry.npmjs.org/@zip.js/zip.js/-/zip.js-2.7.69.tgz",
+      "integrity": "sha512-7xNXayr/igXx590qFfCM8XYoyGO0Jazjnk9lJ99GSi1JzY5laq8RcgiE+ymVZTNqqqlrdQSLMr5SwuD1Cle0kw==",
       "dev": true,
       "engines": {
         "bun": ">=0.7.0",
@@ -1456,56 +1449,6 @@
         "url": "https://paulmillr.com/funding/"
       }
     },
-    "node_modules/chromedriver": {
-      "version": "138.0.5",
-      "resolved": "https://registry.npmjs.org/chromedriver/-/chromedriver-138.0.5.tgz",
-      "integrity": "sha512-WE5O09if9TmFfIpvydt5dyhj+TNTUttvnujoRtAShQuDghulSh1HFirBnjNrAWjEoMkXn9VUw+cCYzZ597VPJQ==",
-      "dev": true,
-      "hasInstallScript": true,
-      "dependencies": {
-        "@testim/chrome-version": "^1.1.4",
-        "axios": "^1.7.4",
-        "compare-versions": "^6.1.0",
-        "extract-zip": "^2.0.1",
-        "proxy-agent": "^6.4.0",
-        "proxy-from-env": "^1.1.0",
-        "tcp-port-used": "^1.0.2"
-      },
-      "bin": {
-        "chromedriver": "bin/chromedriver"
-      },
-      "engines": {
-        "node": ">=20"
-      }
-    },
-    "node_modules/chromedriver/node_modules/lru-cache": {
-      "version": "7.18.3",
-      "resolved": "https://registry.npmjs.org/lru-cache/-/lru-cache-7.18.3.tgz",
-      "integrity": "sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==",
-      "dev": true,
-      "engines": {
-        "node": ">=12"
-      }
-    },
-    "node_modules/chromedriver/node_modules/proxy-agent": {
-      "version": "6.5.0",
-      "resolved": "https://registry.npmjs.org/proxy-agent/-/proxy-agent-6.5.0.tgz",
-      "integrity": "sha512-TmatMXdr2KlRiA2CyDu8GqR8EjahTG3aY3nXjdzFyoZbmB8hrBsTyMezhULIXKnC0jpfjlmiZ3+EaCzoInSu/A==",
-      "dev": true,
-      "dependencies": {
-        "agent-base": "^7.1.2",
-        "debug": "^4.3.4",
-        "http-proxy-agent": "^7.0.1",
-        "https-proxy-agent": "^7.0.6",
-        "lru-cache": "^7.14.1",
-        "pac-proxy-agent": "^7.1.0",
-        "proxy-from-env": "^1.1.0",
-        "socks-proxy-agent": "^8.0.5"
-      },
-      "engines": {
-        "node": ">= 14"
-      }
-    },
     "node_modules/chromium-bidi": {
       "version": "0.5.8",
       "resolved": "https://registry.npmjs.org/chromium-bidi/-/chromium-bidi-0.5.8.tgz",
@@ -1671,12 +1614,6 @@
       "engines": {
         "node": "^12.20.0 || >=14"
       }
-    },
-    "node_modules/compare-versions": {
-      "version": "6.1.1",
-      "resolved": "https://registry.npmjs.org/compare-versions/-/compare-versions-6.1.1.tgz",
-      "integrity": "sha512-4hm4VPpIecmlg59CHXnRDnqGplJFrbLG4aFEl5vl6cK1u76ws3LLvX7ikFnTDl5vo39sjWD6AaDPYodJp/NNHg==",
-      "dev": true
     },
     "node_modules/compress-commons": {
       "version": "6.0.2",

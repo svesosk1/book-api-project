@@ -9,34 +9,30 @@ export const config: WebdriverIO.Config = {
     capabilities: [{
         maxInstances: 1,
         browserName: 'chrome',
-        'goog:chromeOptions': {
-            binary: '/usr/bin/chromium',
-            args: [
-                `--user-data-dir=/tmp/chrome-user-data-dir-${Math.floor(Math.random() * 1e9)}`,
-                '--no-sandbox',
-                '--disable-dev-shm-usage',
-                '--headless',
-                '--disable-gpu',
-                '--window-size=1280,800',
-                '--disable-software-rasterizer',
-                '--disable-setuid-sandbox',
-                '--disable-extensions',
-                '--disable-background-networking',
-                '--disable-sync',
-                '--metrics-recording-only',
-                '--disable-default-apps',
-                '--mute-audio',
-                '--no-first-run',
-                '--no-zygote',
-                '--single-process',
-                '--disable-features=VizDisplayCompositor'
-            ]
-        }
+        'goog:chromeOptions': Object.assign(
+            process.env.IN_DOCKER ? { binary: '/usr/bin/chromium' } : {},
+            {
+                args: [
+                    '--headless=new',
+                    '--disable-gpu',
+                    '--no-sandbox',
+                    '--disable-dev-shm-usage',
+                    '--disable-dev-shm',
+                    '--no-first-run'
+                ]
+            }
+        )
     }],
+    waitforTimeout: 10000,
+    connectionRetryTimeout: 120000,
+    connectionRetryCount: 3,
     services: [
         ['chromedriver', {
-            chromedriverCustomPath: '/usr/bin/chromedriver',
-        }],
+            chromedriverCustomPath: process.env.IN_DOCKER ? '/usr/bin/chromedriver' : undefined,
+            logFileName: 'wdio-chromedriver.log',
+            outputDir: 'logs',
+            args: ['--silent']
+        }]
     ],
     logLevel: 'info',
     framework: 'mocha',
