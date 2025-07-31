@@ -29,6 +29,13 @@ npm ci
 2. Run tests:
 ```sh
 npm test
+# or
+npm run book-store-test
+```
+
+3. Generate test report (optional):
+```sh
+npm run allure:report
 ```
 
 ### Option 2: Using Docker (Recommended)
@@ -50,14 +57,19 @@ docker run -e IN_DOCKER=true book-api-tests
 ## Project Structure
 ```
 book-api-project/
-├── test/                  # Test specifications
-│   └── books.api.spec.ts  # Books API test cases
-├── utils/                 # Utility functions
-│   └── apiClient.ts       # API client configuration
-├── Dockerfile            # Docker configuration
-├── wdio.conf.ts         # WebdriverIO configuration
-├── tsconfig.json        # TypeScript configuration
-└── package.json         # Project dependencies and scripts
+├── helpers/             # Helper functions
+│   └── apiHelpers.ts    # Book API helper methods
+├── test/               # Test specifications
+│   └── books.api.spec.ts # Books API test cases
+├── types/              # TypeScript type definitions
+│   ├── Book.interface.ts # Book interface definitions
+│   └── Book.enum.ts    # Book-related enums
+├── utils/              # Utility functions
+│   └── apiClient.ts    # API client configuration
+├── Dockerfile         # Docker configuration
+├── wdio.conf.ts      # WebdriverIO configuration
+├── tsconfig.json     # TypeScript configuration
+└── package.json      # Project dependencies and scripts
 ```
 
 ## Test Cases
@@ -68,6 +80,12 @@ The test suite includes both happy path and edge cases for:
 - Updating an existing book
 - Deleting a book
 
+Test reports are generated using Allure, providing:
+- Detailed test execution results
+- Request and response details for API calls
+- Test execution timeline
+- Test categorization and filtering options
+
 ## Configuration
 - The base URL is set to `https://fakerestapi.azurewebsites.net` and can be modified in the Dockerfile or through environment variables
 - WebdriverIO configuration is in `wdio.conf.ts`
@@ -76,8 +94,15 @@ The test suite includes both happy path and edge cases for:
 ## Development
 To add new tests:
 1. Create new test files in the `test/` directory
-2. Use the `apiClient` utility from `utils/apiClient.ts` for making API requests
+2. Use the `BookApiHelper` class from `helpers/apiHelpers.ts` for making API requests
 3. Follow the existing test structure for consistency
+4. Add new types or enums in the `types/` directory as needed
+
+Key improvements in the codebase:
+- Centralized API helper methods in `BookApiHelper` class
+- Type-safe book operations using TypeScript interfaces
+- Separated concerns with dedicated type definitions
+- Improved maintainability with enum-based field references
 
 ## Continuous Integration
 The project uses GitHub Actions for CI/CD:
