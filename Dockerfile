@@ -22,6 +22,7 @@ COPY tsconfig.json .
 
 # Set base URL
 ENV BASE_URL=https://fakerestapi.azurewebsites.net
+ENV IN_DOCKER=true
 
 # This is critical: tell WDIO to use ts-node to compile config
 CMD ["npx", "wdio", "run", "wdio.conf.ts"]
